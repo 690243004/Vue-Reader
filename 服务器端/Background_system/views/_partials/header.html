@@ -1,0 +1,66 @@
+<div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand glyphicon glyphicon-leaf" href="#">Blog</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="nav-form navbar-left">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputName2">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="SEARCH">
+                    </div>
+                </form>
+                
+                <ul class="nav navbar-nav navbar-right">
+                {{ if user }}
+                    <li class="dropdown">
+                        <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                        Dropdown <span class="caret"></span> 
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="">
+                            <li><a href="#">当前登录用户：{{ user.username }}</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">个人主页</a></li>
+                            <li><a href="#">设置</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>         
+                    </li>
+                    <a  class="navbar-btn btn btn-default" data-toggle="modal" data-target="#myModal">发起</a>
+                {{else}}
+                    <a href="./login.html" class="navbar-btn btn btn-info">登录</a>
+                    <a href="./register.html" class="navbar-btn btn btn-success">注册</a>
+                 {{/if}}
+                </ul>
+               
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">发起话题</h4>
+      </div>
+      <div class="modal-body">
+        <form id="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">title</label>
+            <input name="title" type="text" class="form-control" id="exampleInputEmail1" placeholder="标题">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">content</label>
+            <input name="content" type="text" class="form-control" id="exampleInputEmail1" placeholder="内容">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="publish">确定</button>
+      </div>
+    </div>
+  </div>
+</div>

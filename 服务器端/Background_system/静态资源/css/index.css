@@ -1,0 +1,16 @@
+#bs-example-navbar-collapse-1 form {
+    margin-top: 8px;
+    height: 34px;
+}
+#bs-example-navbar-collapse-1>ul{
+    height: 100%;
+}
+
+.media .media-left{
+    float: left;
+    width: 40px;
+}
+span.glyphicon{
+    display: block;
+    width: 10px;
+}

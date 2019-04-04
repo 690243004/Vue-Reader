@@ -1,0 +1,7 @@
+node_modules
+dist/
+ssl
+logs/*
+.idea
+.vscode
+pageage-lock.json

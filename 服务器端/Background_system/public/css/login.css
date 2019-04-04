@@ -1,0 +1,23 @@
+.form-signin{
+    max-width: 340px;
+    margin: 0 auto;
+    border: #eee solid 1px;
+    border-top: none;
+    padding: 0 10px 20px 10px;
+}
+.form-signin li,h2{
+    text-align: center;
+}
+.form-signin li span{
+    font-size: 50px;
+}
+.message{
+    width: 340px;
+    height: 40px;
+    margin: 20px auto;
+    border: #eee solid 1px;
+    text-align: center;
+}
+.message p{
+    margin-top: 10px;
+}

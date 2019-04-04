@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/public/css/base.css">
+    <script src="/public/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/public/js/bootstrap.min.js"></script>
+    {{ block 'head'}}{{/block}}
+    <title>{{ block 'title'}}{{/block}}</title>
+</head>
+<body>
+    {{ include '../_partials/header.html' }}
+    {{block 'body'}}
+    
+	<div class="container">
+		<div class="starter-template">
+        <h1>404 IS NOT FOUND</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum necessitatibus, temporibus mollitia quisquam aperiam cupiditate qui maxime error eius! Illo, culpa a! Ut recusandae debitis, porro eaque temporibus, voluptatibus rem!.</p>
+      </div>
+	</div>
+
+    {{/block}}
+    {{include '../_partials/footer.html'}}
+
+<script type="text/javascript">
+    $(function(){
+     $('#publish').on('click',function(){
+            var form = $('#form').serialize()
+            $.ajax({
+                type: "GET",
+                url:'/publish',
+                data:form,
+                success:function(data){
+                    alert(data.message)
+                }
+            })
+        })
+    })
+
+</script>
+</body>
+
+</html>
+
+{{ block 'script'}}{{/block}}
