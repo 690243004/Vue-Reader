@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+	<meta charset="UTF-8">
+	<title>welcome to vue</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<link rel="stylesheet" href="./assets/styles/fonts/daysOne.css">
+	<link rel="stylesheet" href="./assets/styles/fonts/cabin.css">
+	<link rel="stylesheet" href="./assets/styles/fonts/montserrat.css">
+	<link rel="stylesheet" href="./assets/styles/fonts/tangerine.css">
+	
+<script type="text/javascript">
+	(function() {
+    var newRem = function() {
+        var html = document.documentElement;
+        var fontsize = html.getBoundingClientRect().width / 
+		10;
+        if( fontsize<50){
+        	 html.style.fontSize = 50 + 'px'
+        }else{
+        	html.style.fontSize = html.getBoundingClientRect().width /10 + 'px';
+        }
+    };
+    window.addEventListener('resize', newRem, false);
+    newRem();
+})();
+</script>
+	<div id="app">
+		
+	</div>
+</body>
+</html>
